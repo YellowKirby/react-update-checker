@@ -63,7 +63,7 @@ returns the custom class, regardless of `process.env.NODE_ENV`.
 
 ### `getFailedKeys(object1, object2)`
 
-```
+```js
 import { getFailedKeys } from 'react-update-checker';
 
 const sameReference = {};
@@ -91,7 +91,7 @@ are not included in the return value.
 
 ### `isShallowEqual(object1, object2)`
 
-```
+```js
 import { isShallowEqual } from 'react-update-checker';
 
 isShallowEqual({ foo: 'bar' }, { foo: 'bar' });
