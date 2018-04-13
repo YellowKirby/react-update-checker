@@ -1,0 +1,66 @@
+{
+  "name": "react-update-checker",
+  "version": "0.0.0",
+  "description": "Console warnings for when a React component updates even though the props/state are deeply equal.",
+  "license": "MIT",
+  "repository": "YellowKirby/react-update-checker",
+  "sideEffects": false,
+  "main": "./lib.js",
+  "module": "./lib.es.js",
+  "author": {
+    "url": "github.com/YellowKirby"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "xo",
+    "test": "nyc ava",
+    "precommit": "pretty-quick --staged",
+    "build:cjs": "babel ./index.js -o lib.js",
+    "build:esm": "cross-env NODE_ENV=esm babel ./index.js -o lib.es.js",
+    "build": "run-p build:*"
+  },
+  "files": [
+    "index.js"
+  ],
+  "xo": {
+    "space": true,
+    "prettier": true
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none"
+  },
+  "ava": {
+    "require": "@babel/register"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "@babel/register": "^7.0.0-beta.44",
+    "ava": "^1.0.0-beta.3",
+    "babel-plugin-lodash": "^3.3.2",
+    "cross-env": "^5.1.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "husky": "^0.14.3",
+    "npm-run-all": "^4.1.2",
+    "nyc": "^11.0.0",
+    "prettier": "^1.12.0",
+    "pretty-quick": "^1.4.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "sinon": "^4.5.0",
+    "xo": "^0.20.3"
+  },
+  "dependencies": {
+    "fbjs": "^0.8.16",
+    "lodash": "^4.17.5"
+  }
+}
