@@ -1,6 +1,6 @@
 {
   "name": "react-update-checker",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Console warnings for when a React component updates even though the props/state are deeply equal.",
   "license": "MIT",
   "repository": "YellowKirby/react-update-checker",
